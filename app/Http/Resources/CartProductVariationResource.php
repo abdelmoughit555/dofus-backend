@@ -2,7 +2,7 @@
 
 namespace App\Http\Resources;
 
-class CartProductVariationResource extends ProductindexResource
+class CartProductVariationResource extends ProductIndexResource
 {
     /**
      * Transform the resource into an array.
