@@ -21,7 +21,7 @@ class ProductIndexResource extends JsonResource
             'description' => $this->description,
             'category' => CategoryResource::collection($this->whenLoaded('categories')),
             'currency' => $this->currency(),
-            'image' => $this->image["url"]
+            'image' => ""
         ];
     }
 }
