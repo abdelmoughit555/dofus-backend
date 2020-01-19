@@ -14,6 +14,7 @@ class Product extends Model
     use Imageable, IP;
 
     protected $with = ["categories"];
+
     protected $fillable = [
         "name",
         "slug",
