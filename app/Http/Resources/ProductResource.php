@@ -22,7 +22,7 @@ class ProductResource extends ProductIndexResource
     protected function  sellable($request)
     {
         return array_merge(parent::toArray($request), [
-            'price' => number_format($this->price_sell / 100, 2) / $this->rate(),
+            'price' => number_format(($this->price_sell / 100) / $this->rate(),2),
             'is_sellable' => $this->is_sellable,
         ]);
     }
@@ -30,7 +30,7 @@ class ProductResource extends ProductIndexResource
     protected function buyable($request)
     {
         return array_merge(parent::toArray($request), [
-            'price' => number_format($this->price_buy / 100, 2) / $this->rate(),
+            'price' => number_format(($this->price_buy / 100) / $this->rate(),2),
             'is_buyable' => $this->is_buyable,
         ]);
     }
